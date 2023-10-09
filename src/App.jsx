@@ -41,31 +41,38 @@ function App() {
   }, []);
 
   return (
-    <div className="App bg-gradient-to-tr from-[#111111] via-[#878f84] to-[#32413c]">
-      <div className="Div-1">
-        <p className="Para">
-          Timer: {Math.floor(count1 / 60)} : {count1 % 60}
-        </p>
+    <>
+      <div className="App bg-gradient-to-tr from-[#111111] via-[#878f84] to-[#32413c]">
+        <div className="Div-1">
+          <p className="Para">
+            Timer: {Math.floor(count1 / 60)} : {count1 % 60}
+          </p>
+          <button
+            className="Button bg-gradient-to-tr  from-[#b3b2b2] via-[#000000] to-[#949494]"
+            onClick={() => startTimer(timer1, timer2, setCount1)}
+          >
+            Player 1
+          </button>
+        </div>
+        <div className="Div-2">
+          <p className="Para">
+            Timer: {Math.floor(count2 / 60)} : {count2 % 60}
+          </p>
+          <button
+            className="Button bg-gradient-to-tr  from-[#b3b2b2] via-[#000000] to-[#949494]"
+            onClick={() => startTimer(timer2, timer1, setCount2)}
+          >
+            Player 2
+          </button>
+        </div>
         <button
-          className="Button bg-gradient-to-tr  from-[#b3b2b2] via-[#000000] to-[#949494]"
-          onClick={() => startTimer(timer1, timer2, setCount1)}
+          className="mt-[2rem] ml-[35rem] bg-gradient-to-tr  from-[#b3b2b2] via-[#000000] to-[#949494]"
+          onClick={resetTimer}
         >
-          Player 1
+          Reset Timer
         </button>
       </div>
-      <div className="Div-2">
-        <p className="Para">
-          Timer: {Math.floor(count2 / 60)} : {count2 % 60}
-        </p>
-        <button
-          className="Button bg-gradient-to-tr  from-[#b3b2b2] via-[#000000] to-[#949494]"
-          onClick={() => startTimer(timer2, timer1, setCount2)}
-        >
-          Player 2
-        </button>
-      </div>
-      <button onClick={resetTimer}>Reset Timer</button>
-    </div>
+    </>
   );
 }
 
