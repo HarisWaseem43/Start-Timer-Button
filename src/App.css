@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+  margin: 10% 20% 0 20%;
+  border-radius: 20px;
+  padding: 3%;
+}
+.Para {
+  font-size: 30px;
+  margin-bottom: 6px;
+  border-radius: 12px;
+  margin: 0 20% 10px 20%;
+  color: black;
+  font-weight: bold;
+}
+.Button {
+  font-size: 18px;
+}
+.Div-2 {
+  margin-top: 15%;
+}
